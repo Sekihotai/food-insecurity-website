@@ -1,0 +1,17 @@
+li ul {
+  list-style: none;
+}
+a {
+  text-decoration: underline;
+}
+
+.info-list > li {
+  margin-bottom: 2em;
+}
+
+
+@media screen and (max-width: 970px)  {
+  .logo {
+    display: none;
+  }
+}

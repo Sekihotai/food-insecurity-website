@@ -1,0 +1,27 @@
+.card {
+  padding: 48px 24px;
+  background-color: var(--container-color);
+  color: var(--text-color);
+  text-align: center;
+  font-size: 32px;
+
+  padding: 24px;
+  border-radius: 16px;
+}
+
+header {
+  background-image: url(https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/congress.png?v=1689607708260);
+}
+.header-link {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 630px)  {
+  .logo {
+    display: none;
+  }
+}
+   
+
+
