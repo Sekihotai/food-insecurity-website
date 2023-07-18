@@ -1,4 +1,4 @@
-// Fetch the TSV file and generate the table
+const sidebar = document.getElementById("sidebar");
 const hamburger = document.getElementById("activate");
 
 function loadData() {
@@ -13,8 +13,9 @@ function loadData() {
       // Generate the HTML table dynamically
       const tableBody = document.querySelector("#foodPantryTable tbody");
 
-      foodPantryData.forEach((foodPantry) => {
+      foodPantryData.forEach((foodPantry, i) => {
         const row = document.createElement("tr");
+        row.setAttribute("data-index", i);
 
         const nameCell = document.createElement("td");
         nameCell.textContent = foodPantry.name;
@@ -42,6 +43,10 @@ function loadData() {
         row.appendChild(volunteerCell);
 
         tableBody.appendChild(row);
+        
+        foodPantry.index = i;
+        
+        localStorage.setItem(`tableSegment-${i}`, JSON.stringify(foodPantry));
       });
     });
 }
@@ -53,16 +58,17 @@ function processData(tsvData) {
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i].split("\t");
 
-    if (row.length !== 4) {
-      // Skip rows with mismatched number of columns
-      continue;
-    }
-
     const rowData = {
       name: row[0],
       address: row[1],
       phone: row[2],
       volunteer: row[3],
+      latitude: parseFloat(row[4]),
+      longitude: parseFloat(row[5]),
+    };
+
+    const name = {
+      name: row[0],
     };
 
     data.push(rowData);
@@ -74,25 +80,26 @@ function processData(tsvData) {
 function activateHamburger() {
   if (hamburger.dataset.active == 0) {
     hamburger.classList.add("is-active");
-    hamburger.dataset.active = 1
+    sidebar.classList.add("open");
+    hamburger.dataset.active = 1;
   } else {
     hamburger.classList.remove("is-active");
-    hamburger.dataset.active = 0
+    sidebar.classList.remove("open");
+    hamburger.dataset.active = 0;
   }
-  
 }
 
-/* MASSIVE CSS HINT
-.is-activveerwer {
-  animation: slideOut 0.25s cubic-bezier(0.33, 1, 0.68, 1);
+function resizeSidebar() {
+  const header = document.querySelector("header");
+
+  let height = header.getBoundingClientRect().height;
+  sidebar.style.height = `calc(100vh - ${height}px + ${window.scrollY}px)`;
+  sidebar.style.top = `calc(${height}px - ${window.scrollY}px)`;
 }
 
-@keyframes slideOut {
-    0% {
-        transform: translateX(-100%);
-    }
-}*/
-
-
+window.addEventListener("load", resizeSidebar);
+window.addEventListener("resize", resizeSidebar);
+window.addEventListener("scroll", resizeSidebar);
 hamburger.addEventListener("click", activateHamburger);
+console.log("Crazy? I was crazy once. They locked me in a room. A rubber room. A rubber room filled with rats. And rats make me crazy.")
 loadData();

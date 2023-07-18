@@ -3,9 +3,11 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "public"), {
-  extensions: ['html', 'htm']
-}));
+app.use(
+  express.static(path.join(__dirname, "public"), {
+    extensions: ["html", "htm"],
+  })
+);
 
 app.use("*", (req, res) => {
   // TODO: send 404 web page
@@ -15,3 +17,5 @@ app.use("*", (req, res) => {
 app.listen(3000, () => {
   console.log("LETS GOOO");
 });
+
+//amogus

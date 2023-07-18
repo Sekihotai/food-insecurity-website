@@ -11,11 +11,10 @@ function getLocation() {
 }
 
 function saveLocation(position) {
-  var latitude = position.coords.latitude;
-  var longitude = position.coords.longitude;
+  var latitude1 = position.coords.latitude;
+  var longitude1 = position.coords.longitude;
 
  
 
 }
-var 
-if (position.coords.latitude === 
+
