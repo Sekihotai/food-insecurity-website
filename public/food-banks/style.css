@@ -15,3 +15,20 @@ a {
     display: none;
   }
 }
+header{
+  font-size: 15px;
+}
+h1{
+  color: black;
+  text-decoration:none;
+}
+footer { 
+  padding: 36px 12px;
+  background-color: #7bb649;
+  
+  font-size: 15px;
+  color: #2B9432;
+}
+footer p{
+  text-align: bottom;
+}
