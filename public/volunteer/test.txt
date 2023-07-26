@@ -1,0 +1,19 @@
+On February 11, 2009, an anonymous user going by the name of "Satoshi Nakamoto" would make a forum post detailing his idea to create an 
+anonymous, distributed currency. His idea was bitcoin, and the currency would become Bitcoin.
+
+From the start, Bitcoin's entire purpose was to be uncontrollable. His very first forum post detailing his intentions with Bitcoin said 
+"The root problem with conventional currency is all the trust that's required to make it work. The central bank must be trusted not 
+to debase the currency, but the history of fiat currencies is full of breaches of that trust. Banks must be trusted to hold our money and 
+transfer it electronically, but they lend it out in waves of credit bubbles with barely a fraction in reserve. We have to trust them with 
+our privacy, trust them not to let identity thieves drain our accounts... With e-currency based on cryptographic proof, without the need 
+to trust a third party middleman, money can be secure and transactions effortless." And this can be seen in Bitcoin's structures.
+
+The core of Bitcoin is the blockchain. It manages transactions, and in turn it is managed by everyone that mines Bitcoin. It is perhaps
+one of the most impactful pieces of code ever created, but its complexity makes it hard for people to appreciate this.
+
+The blockchain is best described as a record of every transaction done with Bitcoin. Ten minutes worth of transactions are put onto the blockchain
+as "blocks". Each block of transactions has a unique number that identifies it, called a "hash". The hash of each block is mathmatically tied
+to the hash of the preceding block. The job of a bitcoin miner is to do complex math problems to prove that the hash of the current block is
+mathmatically tied to the last. For every hash verified, a miner gets an amount of bitcoin proportional to the amount of work they did to help
+verify the hash. This is how the bitcoin economy flows, both through processing transactions and creating new bitcoin for people to use.
+

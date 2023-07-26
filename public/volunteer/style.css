@@ -3,13 +3,17 @@ table {
   width: auto;
   height: auto;
 }
+
 header {
-  background-image: url(https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/image.png?v=1689702452759);
+  background-image: url("https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/volunteer-transparent.png?v=1689777643097");
+  background-size: cover;
 }
+
 .header-link {
   font-size: 24px;
   font-weight: bold;
 }
+  
 td {
   padding: 4px 16px;
   border-bottom: 2px solid var(--container-color);
@@ -72,30 +76,8 @@ h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 24px;
+  /*padding: 24px;*/
   padding-bottom: 0;
-}
-
-#sidebar {
-  position: fixed; /* Sit on top of the page content */
-  width: 300px;
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-color: rgba(0,0,0); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  transform: translateX(100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s, visibility 0s 0.3s;
-  
-}
-#sidebar.open {
-  transform: translateX(0px);
-  opacity: 1;
-  visibility: visible;
-  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s, visibility 0s;
 }
 
 .main-container {
@@ -106,20 +88,10 @@ h1 {
   height: 100%
 }
 
-main {
-  margin: 0 !important
-}
-
 @media screen and (max-width: 540px)  {
   .logo {
-    width: 70px;
-    height: auto
+    display: none;
   }
-}
-
-#activate {
-  position: absolute;
-  right: 24px;
 }
 
 * {
@@ -130,8 +102,25 @@ main {
   color: white
 }
 
+.tablelegend {
+  color: gray;
+  display: none
+}
 
-
-
-
-
+#track-me, #dropDown {
+  background-color: var(--link-color);
+  border: 0px;
+  color: white;
+  padding: 12px 32px;
+  width: min-content;
+  text-wrap: nowrap;
+}
+#track-me:hover, #dropDown:hover {
+  filter: saturate(1.5);
+}
+#track-me:active, #dropDown:active {
+  filter: saturate(0.5);
+}
+/* p {
+  font-size: 20px;
+} */

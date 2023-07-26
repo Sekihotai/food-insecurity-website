@@ -1,28 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   --background: #ffffff;
   --container-color: #d9d9d9;
   --text-color: #0c0c0c;
-  --primary-color: #3bcf44;
+  --primary-color: rgb(11, 110, 79);
+  --card-outline-color: #0b6e4f;
   --link-color: #009bd6;
-  --footer-color: #DDF9EC;
+  --footer-color: #073b3a;
+  --sidebar-color: rgb(11,110,79);
+  --sidebar-border-color: #073b3a;
+  --sidebar-text-color: white;
 }
+
+/*#defed7*/
 
 html {
   min-height: 100%;
   height: 100%;
 }
 body {
-  height: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: var(--background);
+  height: 150%;
+/*   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
   color: var(--text-color);
   accent-color: var(--primary-color);
+  background-color: var(--background);
   color-scheme: light;
   margin: 0px;
   overscroll-behavior-y: none;
+  scroll-behavior: smooth;
   
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -32,43 +42,54 @@ body {
 
 .logo {
   margin: 0;
-  padding: 0
+  padding: 0;
+  width: 226px;
+  height: 78px;
+  
+  
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0c0c0c;
-    --container-color: #262626;
-    --text-color: #ffffff;
-  }
-
-  body {
-    color-scheme: dark;
-  }
-} */
 
 header {
   padding: 48px 24px;
   background-color: var(--primary-color);
+  color: white;
   text-align: center;
   font-size: 24px;
-  
+  transition: opacity 0.2s ease-in-out;
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-between;
+  width: 100%;
+  z-index: 1000;
+  background-position: bottom;
+  box-sizing: border-box;
+}
+header.small-sticky {
+  position: fixed;
+  height: 100px;
+  opacity: 0.25;
+}
+
+header.small-sticky:hover {
+  opacity: 1;
+}
+@media only screen and (max-width: 600px) {
+  header.small-sticky {
+    opacity: 1;
+  }
 }
 footer { 
-  padding: 36px 12px;
-  background-color: white;
+  padding: 36px 72px;
+  background-color: var(--footer-color);
   text-align: center;
-  font-size: 30px;
-  color: #2B9432;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
 }
 header h1 {
   margin: 0px;
- 
 }
 
 header h2 {
@@ -92,23 +113,57 @@ main {
   width: -webkit-fill-available;
 }
 
-.card {
+#sidebar {
+  position: fixed; /* Sit on top of the page content */
+  width: 300px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: var(--sidebar-color); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s, visibility 0s 0.3s;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding-top: 0.5em;
+  border-radius: 32px 0px 0px 32px;
   padding: 24px;
+  border: 6px solid var(--sidebar-border-color);
+  border-right: 0px;
+  color: var(--sidebar-text-color);
+}
+#sidebar a {
+  color: var(--sidebar-text-color);
+}
+#sidebar.open {
+  transform: translateX(0px);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s, visibility 0s;
+}
+.card {
+  display: flex;
+  padding: calc(0.67em + 24px) 24px;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  color: var(--text-color);
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
   border-radius: 16px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
   background-color: var(--container-color);
   transition: transform 0.1s ease-in-out, outline 0.1s ease-in-out;
 }
 .card:hover, .card:active {
-  outline: 6px solid var(--link-color);
+  outline: 6px solid var(--card-outline-color);
   transform: scale(1.025);
-}
-
-.logo {
-  /** position: absolute;
-  left: 24px; **/
-  width: 100px;
-  height: 100px;
 }
 
 a {
@@ -117,6 +172,13 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+a:has(.card) {
+  text-decoration: none !important;
+}
+
+table {
+  background-color: white;
 }
 
 .no-select {
@@ -147,5 +209,7 @@ a:hover {
   padding: 0;
   display: flex;
   justify-content: center;
-  height: 100%
+  flex-direction: column;
+  height: 100%;
+  gap: 1em;
 }

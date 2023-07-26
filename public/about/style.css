@@ -1,29 +1,6 @@
-#sidebar {
-  position: fixed; /* Sit on top of the page content */
-  width: 300px;
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-color: rgba(0,0,0); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  transform: translateX(100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s, visibility 0s 0.3s;
-  
-}
-#sidebar.open {
-  transform: translateX(0px);
-  opacity: 1;
-  visibility: visible;
-  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s, visibility 0s;
-}
-
-@media screen and (max-width: 540px)  {
+@media screen and (max-width: 350px)  {
   .logo {
-    width: 70px;
-    height: auto
+    display: none;
   }
 }
 
@@ -32,5 +9,106 @@
 }
 
 .sidebar.a {
-  color: white
+  color: white;
+}
+
+p {
+  text-indent: 4ch;
+}
+
+.title {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+/* Authors styles */
+.authors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5ch;
+  flex-basis: 30%;
+}
+.nameplate {
+  display: flex;
+  flex-direction: column;
+}
+.pfp {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+.name {
+  font-size: 1.5em;
+  line-height: 2ch;
+  font-weight: bold;
+}
+
+/* Rainbow names */
+.rainbow-text.wes {
+  background: linear-gradient(to right, #e349ff, #6200ff, #ff3399, #0000ff, #e349ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+.rainbow-text.julian {
+  background: linear-gradient(to right, #ffd066, #8700ff, #ff3399, #ffd066);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+.rainbow-text.andrew {
+  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 8s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+.rainbow-text.cole {
+  background: linear-gradient(to right, #ffee64, #94bbfe, #ffee64, #7d6336);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 4s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+.rainbow-text.harry {
+  background: linear-gradient(to right, #19b899, #2873cb, #1b13f2, #e160fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 1s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+.rainbow-text.khasim {
+  background: linear-gradient(to right, #7600c4, #878787, #eaae31, #242424);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 8s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow-animation {
+  0%, 100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
 }

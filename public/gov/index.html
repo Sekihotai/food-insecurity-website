@@ -10,42 +10,60 @@
     <meta name="title" content="Best Team Site" />
     <meta name="description" content="another god damn description." />
     <meta name="theme-color" content="#48FF4B" />
+    <link href="/hamburgers.css" rel="stylesheet" />
     <title>Best Team Site</title>
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link href="/hamburgers.css" rel="stylesheet" />
+    <script defer src="/hambar.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <header>
-      <img src="https://i.imgur.com/ATqi16O.png" alt="logo" class="logo no-select no-drag">
+      <img src="https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/image-removebg-preview%20(1).png?v=1690221893010" alt="logo" class="logo no-select no-drag">
       
       <h1>Gov Help Page</h1>
+    <button class="hamburger hamburger--collapse" type="button" id="activate" data-active="0">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </header>
+    <div id="sidebar">
+      <b><a style="text-decoration:none" href="/">Main Page</a></b>
+      <b><a style="text-decoration:none" href="/food-banks">Food Banks</a></b>
+      <b><a style="text-decoration:none" href="/volunteer">Volunteering</a></b>
+      <b><a style="text-decoration:none" href="/gov">Gov Help</a></b>
+      <b><a style="text-decoration:none" href="/about">About</a></b>
+    </div>
     <main>
-      <span>
+       <div class="main-container">
+      <h2>
         If you are a woman, minority, or a single parent, you may be able to
         apply for special opportunities within the provided government programs.
-      </span>
-      <a href="https://www.usa.gov/food-help">
+      </h2>
+      <a href="https://www.usa.gov/food-help" target="_blank">
         <div class="card">
-          <span class="header-link"> General Gov/Food Info </span>
+          <span>General Gov &#38; Food Info</span>
         </div>
       </a>
-      <a href="https://www.fns.usda.gov/snap/online-purchasing-pilot">
+      <a href="https://www.fns.usda.gov/snap/online-purchasing-pilot" target="_blank">
         <div class="card">
-          <span class="header-link"> Food Access and Economic Assistance </span>
+          <span>Food Access and Economic Assistance</span>
         </div>
       </a>
-      <a href="https://usagrantapplications.org/v9/c/">
+      <a href="https://usagrantapplications.org/v9/c/" target="_blank">
         <div class="card">
-          <span class="header-link">
-            Applications for Economic Assistance
-          </span>
+          <span>Applications for Economic Assistance</span>
         </div> 
       </a>
+    </div>
     </main>
     
     <footer>
-      Hi
+      <p>
+        <center>PLICA 2023</center>
+      </p>
     </footer>
   </body>
 </html>

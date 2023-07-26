@@ -2,461 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="title" content="Best Team Site" />
     <meta name="description" content="another god damn description." />
     <meta name="theme-color" content="#48FF4" />
     <title>Best Team Site</title>
     <link rel="stylesheet" href="/main.css" />
+    <link href="/hamburgers.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="./geolocate.js"></script>
+    <link href="/hamburgers.css" rel="stylesheet" />
+    <script defer src="/hambar.js"></script>
+    <script defer src="./tableLocations.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <header>
-      <img
-        src="https://i.imgur.com/ATqi16O.png"
-        alt="logo"
-        class="logo no-select no-drag"
-      />
-     
-
-       <h1>Philadelphia Food Banks</h1>
-      
-      
+      <img src="https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/image-removebg-preview%20(1).png?v=1690221893010" alt="logo" class="logo no-select no-drag" />
+      <h1>Philadelphia Food Banks</h1>
+      <button class="hamburger hamburger--collapse" type="button" id="activate" data-active="0">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </header>
-
-    <main>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d26818.831805694477!2d-75.21397414312571!3d39.961093452317144!3m2!1i1024!2i768!4f13.1!2m1!1sfood%20banks!5e0!3m2!1sen!2sus!4v1689265804990!5m2!1sen!2sus"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <ul class="info-list">
-        <li>
-          <span><h2>Salvation Army Philadelphia</h2></span>
-          <span> <p></p>The Salvation Army is an international movement based in Christian beliefs which pledges aid to all people of the world without discrimination. Down below, you'll find their main support page for the Philadelphia are as well as a list of locations throughout the city.<p></p></span>
-        
-                <a
-                  href="https://easternusa.salvationarmy.org/eastern-pennsylvania/greater-philadelphia/"
-                  >Website</a
-                >
-            
-            <li><h3>Locations</h3></li>
-            <ul>
-              <span><b>PHILADELPHIA WEST CORPS</b>:</span>
-              <li>
-                Address: 5501 Market Street, PHILADELPHIA, Pennsylvania 19139
-              </li>
-              <li>
-                <a
-                  href="https://easternusa.salvationarmy.org/eastern-pennsylvania/west-philadelphia/"
-                  >Website</a
-                >
-              </li>
-              <li>
-                Phone Number: 215-474-1010
-                <p></p>
-              </li>
-
-              <span><b>RED SHIELD FAMILY RESIDENCE</b>:</span>
-              <li>Address: 715 North Broad Street, PHILADELPHIA, Pennsylvania 19123</li>
-              <li>
-                <a href="https://easternusa.salvationarmy.org/eastern-pennsylvania/greater-philadelphia/red-shield-family-residence/"
-                  >Website</a
-                >
-              </li>
-              <li>
-                Phone Number: (215)787-2887
-                <p></p>
-              </li>
-
-              <span><b>IVY RESIDENCE</b>:</span>
-              <li>Address: 4051 Ford Road, PHILADELPHIA, Pennsylvania 19131</li>
-              <a
-                href="https://easternusa.salvationarmy.org/eastern-pennsylvania/greater-philadelphia/senior-citizens-housing/"
-                >Website</a
-              >
-              <li>
-                Phone Number: (215)871-3303
-                <p></p>
-              </li>
-
-              <span><b>PHILADELPHIA CENTRAL CORPS</b>:</span>
-              <li>
-                Address: 3225 Reed Street, PHILADELPHIA, Pennsylvania 19146
-              </li>
-              <li>
-                <a
-                  href="https://easternusa.salvationarmy.org/eastern-pennsylvania/philadelphia-central/"
-                  >Website</a
-                >
-              </li>
-              <li>
-                Phone Number: (215)787-2812
-                <p></p>
-              </li>
-<li>
-              <span><b>PHILADELPHIA CITADEL CORPS</b>:</span>
-              <li>
-                Address: 5830 Rising Sun Avenue, PHILADELPHIA, Pennsylvania
-                19120
-              </li>
-              <li>
-                <a
-                  href="https://easternusa.salvationarmy.org/eastern-pennsylvania/philadelphia-citadel/"
-                  >Website</a
-                >
-              </li>
-              <li>
-                Phone Number: (215)722-5447
-                <p></p>
-              </li></li>
-<li>
-              <span><b>PHILADELPHIA KOREAN CORPS</b>:</span>
-              <li>
-                Address: 5830 Rising Sun Avenue, PHILADELPHIA, Pennsylvania
-                19120
-              </li>
-              <li>
-                <a
-                  href="https://easternusa.salvationarmy.org/eastern-pennsylvania/philadelphia-korean/"
-                  >Website</a
-                >
-              </li>
-              <li>
-                Phone Number: (215)742-8992
-                <p></p>
-              </li></li>
-<li>
-              <span><b>PHILADELPHIA KROC CENTER</b>:</span>
-              <li>
-                Address: 4200 Wissahickon Avenue, Philadelphia, Pennsylvania
-                19129
-              </li>
-              <li>
-                <a
-                  href="https://easternusa.salvationarmy.org/philadelphia-kroc/home/"
-                  >Website</a
-                >
-              </li>
-              <li>
-                Phone Number: (215)558-1556
-                <p></p>
-              </li></li>
-<li>
-              <span><b>DEVELOPMENTAL DISABILITIES PROGRAM</b>:</span>
-              <li>
-                Address: 701 N. Broad Street, PHILADELPHIA, Pennsylvania 19123
-              </li>
-              <li>
-                <a
-                  href="https://easternusa.salvationarmy.org/eastern-pennsylvania/partner-with-adults/"
-                  >Website</a
-                >
-              </li>
-              <li>
-                Phone Number: (215)787-2800
-                <p></p>
-              </li>
-        </li>
-            
-
-            <span><b>PHILADELPHIA ROXBOROUGH CORPS</b>:</span>
-            <li>
-              Address: 6730 Ridge Avenue, PHILADELPHIA, Pennsylvania 19128
-            </li>
-            <li>
-              <a
-                href="https://easternusa.salvationarmy.org/eastern-pennsylvania/roxborough/"
-                >Website</a
-              >
-            </li>
-            <li>
-              Phone Number: (215)482-5911
-              <p></p>
-            </li>
-
-            <span><b>PHILADELPHIA TABERNACLE CORPS</b>:</span>
-            <li>
-              Address: 3150 North Mascher Street, PHILADELPHIA, Pennsylvania
-              19133
-            </li>
-            <li>
-              <a
-                href="https://easternusa.salvationarmy.org/eastern-pennsylvania/philadelphia-tabernacle/"
-                >Website</a
-              >
-            </li>
-            <li>
-              Phone Number: (215)423-9300
-              <p></p>
-            </li>
-
-            <span><b>PHILADELPHIA TEMPLE CORPS</b>:</span>
-            <li>
-              Address: 1340 Brown Street, PHILADELPHIA, Pennsylvania 19123
-            </li>
-            <li>
-              <a
-                href="https://easternusa.salvationarmy.org/eastern-pennsylvania/philadelphia-temple/"
-                >Website</a
-              >
-            </li>
-            <li>
-              Phone Number: (215)787-2962
-              <p></p>
-            </li>
-
-            <span><b>REED HOUSE</b>:</span>
-            <li>Address: 1320 South 32nd Street, PHILADELPHIA, Pennsylvania 19146</li>
-            <li>
-              <a href="https://easternusa.salvationarmy.org/eastern-pennsylvania/greater-philadelphia/supportive-housing/">Website</a>
-            </li>
-            <li>
-              Phone Number: (215)755-6789
-              <p></p>
-            </li>
-            
-            <span><b>SHELTER PLUS CARE PROGRAM</b>:</span>
-            <li>Address: SHELTER PLUS CARE PROGRAM</li>
-            <li>
-              <a href="https://easternusa.salvationarmy.org/eastern-pennsylvania/greater-philadelphia/supportive-housing/">Website</a>
-            </li>
-            <li>
-              Phone Number:  (215)755-6789 
-              <p></p>
-            </li>
-          
-</ul>
-<li>
-  <span><h2>Other religious organizations</h2><p></p>There are plenty of churches in the area that help people in need, below is a collection of religious groups who offer various programs to aid people in need.</span>
-            
-            <li><h3>Locations</h3></li>
-            <ul>
-              <li>
-          <span><b>Wharton Wesley Helping Handsy</b>:</span>
-          <ul>
-            <li>Address: 5341 Catharine St, Philadelphia, PA 19143</li>
-            <li>Phone Number: (215)472-6777</li>
-            <li>
-              <a href="https://www.wharton-wesleyumc.org/ministries">Website</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Church Of The Holy Apostles - Food Distribution Center</b>:</span>
-          <ul>
-            <li>Address: 260 S 51st St, Philadelphia, PA 19139</li>
-            <li>Phone Number: (267)908-3287</li>
-            <li>
-              <a href="https://www.hamphilly.org/">Website</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Mount Zion United Holy Church - Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 4110 Haverford Ave, Philadelphia, PA 19104</li>
-            <li>Phone Number: (215)349-6734</li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Faith Chapel Baptist Church Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 4720 Woodland Ave, Philadelphia, PA 19143</li>
-            <li>Phone Number: (215)724-5144</li>
-            <li>
-              <a
-                href="https://faithchapelendtimes1.wordpress.com/food-ministry/"
-                >Website</a
-              >
-            </li>
-          </ul>
-        </li> 
-      <li>
-          <span><b>Mantua Scattered Site Tenant Council - Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 3802 Mt Vernon St, Philadelphia, PA 19104</li>
-            <li>Phone Number: (267)242-0989</li>
-            <li>
-              <a
-                href="https://www.hungercoalition.org/food-pantries/mantua-scattered-site-tentant-council"
-                >Website</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Grace Evangelical Lutheran Church-Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 3529 Haverford Ave, Philadelphia, PA 19104</li>
-            <li>Phone Number: (215)222-3570</li>
-            <li>
-              <a
-                href="https://www.hungercoalition.org/food-pantries/grace-evangelical-lutheran-church-0"
-                >Website</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Cathedral Table Ministries Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 19 S 38th St, Philadelphia, PA 19104</li>
-            <li>Phone Number: (215)386-0234</li>
-            <li>
-              <a href="https://www.philadelphiacathedral.org/">Website</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Saint Gabriel Food Cupboard - Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 2917 Dickinson St, Philadelphia, PA 19146</li>
-            <li>Phone Number: (215)463-4060</li>
-            <li>
-              <a href="https://stgabes.org/food-cupboard">Website</a>
-            </li>
-          </ul>
-        </li>
-       <li>
-          <span><b>Lutheran Church Of Holy Communion-Food Cabinet</b>:</span>
-          <ul>
-            <li>Address:2110 Chestnut St, Philadelphia, PA 19103</li>
-            <li>Phone Number: (215)567-3668</li>
-            <li>
-              <a href="https://www.lc-hc.org/">Website</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Saint Mark's Food Cupboard -Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 1625 Locust St, Philadelphia, PA 19103</li>
-            <li>Phone Number: (215)735-1416</li>
-            <li>
-              <a href="https://www.saintmarksphiladelphia.org/foodcupboard"
-                >Website</a
-              >
-            </li>
-          </ul>
-        </li>     
-      <li>
-          <span
-            ><b>Church Of The Redeemer Baptist - Food Cupboard Ministry-Food
-            Pantry</b>:</span
-          >
-          <ul>
-            <li>Address: 1440 S 24th St, Philadelphia, PA 19146</li>
-            <li>Phone Number: (215)465-1230</li>
-            <li>
-              <a href="https://cotrb.org/outreach-ministries/">Website</a><p>
-              </p>
-            </li>
-          </ul>
-        </li>        
-</ul>
-<span><h2>Other food banks</h2><p></p>Outside of religious organization, there are many groups dedicated to helping people. A colection of organizations in Philadelphia are listed below.</span>
-            
-<li><h3>Locations</h3></li>
-            <ul>
-
-        <li>
-          <span><b>Greater Philadelphia Coalition Against Hunger</b>:</span>
-          <ul>
-            <li>Address: 4527 Haverford Ave, Philadelphia, PA 19139</li>
-
-            <li>
-              <a href="http://www.hungercoalition.org/">Website</a>
-            </li>
-          </ul>
-        </li>
-                
-        <li>
-          <span><b>People's Emergency Center-Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 325 N 39th St, Philadelphia, PA 19104</li>
-            <li>Phone Number: (267)777-5880</li>
-            <li>
-              <a
-                href="https://www.hungercoalition.org/food-pantries/peoples-emergency-center-food-cupboard"
-                >Website</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Are you reading these</b>:</span>
-          <ul>
-            <li>
-              Address: I bet I can hide the rubber room with rats in plain sight.
-            </li>
-            <li>Phone Number: (123)456-7890</li>
-            <li>
-              <a href="/about">Website</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span><b>Mighty Writers North- Food Distribution Center</b>:</span>
-          <ul>
-            <li>
-              Address: Lower Level, 2300 Master St, Philadelphia, PA 19121
-            </li>
-            <li>Phone Number: (610)263-5379</li>
-            <li>
-              <a href="https://mightywriters.org/">Website</a>
-            </li>
-          </ul>
-        </li>
-        
-        <li>
-          <span><b>Mazzoni Center Food Bank Food Pantry</b>:</span>
-          <ul>
-            <li>Address: 1348 Bainbridge St, Philadelphia, PA 19147</li>
-            <li>Phone Number: (215)563-0652</li>
-            <li>
-              <a
-                href="https://www.mazzonicenter.org/supportive-services/food-bank"
-                >Website</a
-              >
-            </li>
-          </ul>
-        </li>
-</ul>
-</li>
-</li>
-</ul>
+    <div id="sidebar">
+      <b><a style="text-decoration:none" href="/">Main Page</a></b>
+      <b><a style="text-decoration:none" href="/food-banks">Food Banks</a></b>
+      <b><a style="text-decoration:none" href="/volunteer">Volunteering</a></b>
+      <b><a style="text-decoration:none" href="/gov">Gov Help</a></b>
+      <b><a style="text-decoration:none" href="/about">About</a></b>
+    </div>
+      <main>
+    <div class="main-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d26818.831805694477!2d-75.21397414312571!3d39.961093452317144!3m2!1i1024!2i768!4f13.1!2m1!1sfood%20banks!5e0!3m2!1sen!2sus!4v1689265804990!5m2!1sen!2sus" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button id="track-me">
+          Find Closest Food Bank
+        </button>
+        <span class="tablelegend">
+          The food bank highlighted in green is the one closest to you!
+        </span>
+        <table id="foodPantryTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Volunteer</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+      </div>
     </main>
-
-    <footer><p> </p><p> </p><p> </p><p> </p> <p style="text-align:left;">
-      Best Team Site © 2023
-      </p>
-</footer>
+    <footer>
+      
+      <p> <center>PLICA 2023</center> </p>
+    </footer>
   </body>
 </html>
-
 <!--
 
-          <li>
-          <span>name</span>
-          <ul>
-            <li>
-              Address:
-            </li>
-            <li>
-              Phone Number:
-            </li>
-            <li>
-              <a href="">Website</a>
-            </li>
-          </ul>
-        </li>
+          Harry contributions and take away.
+          "I mainly worked on the food banks page, 
+          implementing the map and the data for each food bank. 
+          Aswell as helping with formatting around the site. 
+          At the start of this camp, I knew nothing about html or css,
+          and now I can confidently program in them."
 -->
