@@ -14,59 +14,102 @@
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="./style.css" />
     <link href="/hamburgers.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="/hambar.js"></script>
     <script defer src="./script.js"></script>
     <script defer src="./location.js"></script>
   </head>
   <body>
     <header>
-      <img src="https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/bestteam.png?v=1689690176861" alt="logo" class="logo no-select no-drag">
-      
-      <button class="hamburger hamburger--collapse" type="button" id="activate" data-active="0">
+      <img
+        src="https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/image-removebg-preview%20(1).png?v=1690221893010"
+        alt="logo"
+        class="logo no-select no-drag"
+      />
+      <h1>Volunteer</h1>
+
+      <button
+        class="hamburger hamburger--collapse"
+        type="button"
+        id="activate"
+        data-active="0"
+      >
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
     </header>
     <div id="sidebar">
-      <a href="/food-banks">Food Banks</a>
+      <b><a style="text-decoration: none" href="/">Main Page</a></b>
+      <b><a style="text-decoration: none" href="/food-banks">Food Banks</a></b>
+      <b><a style="text-decoration: none" href="/volunteer">Volunteering</a></b>
+      <b><a style="text-decoration: none" href="/gov">Gov Help</a></b>
+      <b><a style="text-decoration: none" href="/about">About</a></b>
     </div>
-    <div class="main-container">
-      <main>
+    <main>
+      <div class="main-container">
         <div class="maintext">
-          <h1>
-            Volunteer
-          </h1>
           <p>
-            You can volunteer at food banks all around Philadelphia! There's always
-            a food bank in need of assistance!
+            You can volunteer at food banks all around Philadelphia! There's
+            always a food bank in need of assistance!
           </p>
+          <p>
+            Whether you donate your food or time, anything you can contribute
+            helps the community.
+          </p>
+          <img style="width: 100%;" src="https://cdn.glitch.global/6c5d39b3-7b99-4e89-a909-735fd19882fc/fini-16-100.png?v=1690310488408" alt="">
         </div>
-        
-        <div style="overflow-x: auto; text-align: -webkit-center;">
-          <button id="track-me">
-            track me please
-          </button>
-          <span id="color">
-          </span>
+        <button id="track-me">Find Closest Food Bank</button>
+         <span class="tablelegend">
+          The food bank highlighted in green is the one closest to you!
+        </span>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Find Ways to Help
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                  <table id="volunteerTable">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Volunteer</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="overflow-x: auto; text-align: -webkit-center">
+          <span id="color"></span>
 
-          <table id="foodPantryTable">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Volunteer</th>
-              </tr>
-            </thead>
-            
-            <tbody>
-            </tbody>
-          </table>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
     <footer>
-      Hi
+      <p><center>PLICA 2023</center></p>
     </footer>
   </body>
 </html>
